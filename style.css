@@ -1,180 +1,142 @@
-:root {
-  --primary-gold: #c49a2a;
-  --primary-dark: #2c2c2c;
-  --primary-red: #b22234;
-  --accent-cream: #fdf8ed;
-}
-
+/* Reset e configurações gerais */
 * {
-  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(135deg, #f5f0e6 0%, #e8e0d0 100%);
+  background-color: #6c757d;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
 }
 
-/* Navbar Personalizada */
+/* Navbar */
 .navbar {
-  background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  padding: 0.8rem 0;
+  background-color: #1a1a2e;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar-brand {
-  font-weight: bold;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  background: linear-gradient(45deg, #ffd700, #ff8c00);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.navbar-nav .nav-link {
-  color: #f8f9fa !important;
-  font-weight: 500;
-  margin: 0 10px;
-  position: relative;
-  transition: 0.3s;
-}
-
-.navbar-nav .nav-link:hover {
   color: #ffd700 !important;
-  transform: translateY(-2px);
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(90deg, #ffd700, #ff8c00);
-  transition: width 0.3s;
+.nav-link {
+  color: #f8f9fa !important;
+  transition: color 0.3s;
 }
 
-.navbar-nav .nav-link:hover::after {
-  width: 100%;
+.nav-link:hover {
+  color: #ffd700 !important;
 }
 
-.btn-outline-success {
-  border-color: #ffd700;
-  color: #ffd700;
+.dropdown-menu {
+  background-color: #1a1a2e;
+  border: none;
 }
 
-.btn-outline-success:hover {
-  background: linear-gradient(45deg, #ffd700, #ff8c00);
-  border-color: transparent;
+.dropdown-item {
+  color: #f8f9fa;
+}
+
+.dropdown-item:hover {
+  background-color: #ffd700;
   color: #1a1a2e;
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255,215,0,0.3);
 }
 
-/* Estilo dos Cards de Imagem */
-.col img {
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  max-height: 250px;
-  object-fit: cover;
-}
-
-.col img:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.3);
-  filter: brightness(1.05);
-}
-
-/* Carrossel com efeito */
+/* Carrossel */
 .carousel {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-  margin: 20px auto;
   max-width: 95%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .carousel-item img {
-  height: 500px;
+  height: 400px;
   object-fit: cover;
 }
 
-/* Cards de Missão, Visão, Valores */
-.row .col {
+/* Galeria de imagens */
+.container img {
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.container img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.container .col p {
+  color: #2c2c2c;
+  margin-top: 10px;
+}
+
+/* Cards de Missão/Visão/Valores */
+#sobre .col {
   background: white;
   margin: 15px;
   padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: all 0.3s;
-  backdrop-filter: blur(5px);
-  background: rgba(255,255,255,0.95);
-  border: 1px solid rgba(196,154,42,0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.row .col:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.2);
-  border-color: #c49a2a;
+#sobre .col:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.row .col h3 {
+#sobre h3 {
   color: #b22234;
-  font-weight: bold;
   border-bottom: 3px solid #ffd700;
   display: inline-block;
   padding-bottom: 8px;
   margin-bottom: 20px;
 }
 
-.row .col h5 {
-  color: #2c2c2c;
+#sobre h5 {
+  color: #333;
+  font-weight: normal;
   line-height: 1.6;
 }
 
-/* Formulário Estilizado */
+/* Formulário */
 form {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: white;
+  max-width: 800px;
+  margin: 40px auto;
   padding: 40px;
-  border-radius: 30px;
-  margin: 30px auto;
-  max-width: 90%;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  border: 1px solid rgba(196,154,42,0.5);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.position-relative h3 {
+form h3 {
   color: #b22234;
-  text-align: center;
-  font-weight: bold;
-  font-size: 2.2rem;
   margin-bottom: 20px;
-  position: relative;
 }
 
-.position-relative h3::after {
-  content: '👑';
-  position: absolute;
-  margin-left: 10px;
-  font-size: 2rem;
+form ul {
+  margin: 20px 0;
+  list-style: none;
+  padding-left: 0;
 }
 
-.form-floating {
-  margin-bottom: 20px;
+form ul li {
+  padding: 5px 0;
+  color: #555;
 }
 
 .form-floating textarea {
-  border-radius: 15px;
-  border: 2px solid #e0e0e0;
-  padding: 20px;
-  transition: 0.3s;
+  border-radius: 8px;
+  border: 1px solid #ddd;
   resize: vertical;
-  min-height: 60px;
 }
 
 .form-floating textarea:focus {
@@ -183,107 +145,88 @@ form {
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #c49a2a, #ff8c00);
+  background-color: #c49a2a;
   border: none;
-  padding: 12px 35px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-radius: 50px;
-  transition: all 0.3s;
+  padding: 12px 30px;
   width: 100%;
-  max-width: 250px;
-  display: block;
-  margin: 20px auto;
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
 .btn-primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(196,154,42,0.4);
-  background: linear-gradient(45deg, #ff8c00, #ffd700);
+  background-color: #a07d22;
+  transform: scale(1.02);
 }
 
-/* Checkbox personalizado */
-.form-check-input:checked {
-  background-color: #c49a2a;
-  border-color: #c49a2a;
-}
-
-/* Rodapé */
-.container.text-center:last-child {
-  background: linear-gradient(90deg, #1a1a2e, #16213e);
-  border-radius: 20px;
-  padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.container.text-center:last-child h5 {
-  color: #ffd700;
-  transition: 0.3s;
-}
-
-.container.text-center:last-child h5:hover {
-  color: #ffffff;
-  transform: translateX(5px);
-}
-
-/* Animações e responsividade */
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 300px;
-  }
-  
-  .row .col {
-    margin: 10px 0;
-  }
-  
-  .navbar-brand {
-    font-size: 1.3rem;
-  }
-  
-  form {
-    padding: 20px;
-  }
-}
-
-/* Botão flutuante de feedback */
+/* Botão de feedback flutuante */
 .feedback-btn {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: linear-gradient(45deg, #c49a2a, #ff8c00);
+  bottom: 20px;
+  right: 20px;
+  background-color: #c49a2a;
   color: white;
   border: none;
   border-radius: 50px;
-  padding: 12px 20px;
-  font-weight: bold;
+  padding: 10px 20px;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s;
 }
 
 .feedback-btn:hover {
-  transform: scale(1.1);
-  background: linear-gradient(45deg, #ff8c00, #ffd700);
+  background-color: #a07d22;
+  transform: scale(1.05);
 }
 
-/* Modal customizada */
+/* Modal */
 .modal-content {
-  border-radius: 30px;
-  background: linear-gradient(135deg, #ffffff, #fff8e7);
+  border-radius: 15px;
 }
 
 .modal-header {
-  background: linear-gradient(90deg, #1a1a2e, #16213e);
+  background-color: #1a1a2e;
   color: #ffd700;
-  border-radius: 30px 30px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
-/* Efeito de loading para cadastro */
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.8; }
-  100% { transform: scale(1); opacity: 1; }
+/* Rodapé */
+.footer {
+  background-color: #1a1a2e;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px auto 20px;
+  color: white;
+}
+
+.footer h5 {
+  color: #ffd700;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Toast */
+.toast {
+  border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+  
+  form {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  #sobre .col {
+    margin: 10px;
+  }
+  
+  .feedback-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
 }
