@@ -6,15 +6,18 @@
     <meta name="description" content="KingFood - Plataforma de descoberta gastronômica">
     <meta name="author" content="KingFood">
     
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     
-    <title> KingFood's | Gastronomia e Restaurantes </title>
+    <title> KingFood | Gastronomia e Restaurantes </title>
   </head>
   <body>
 
     <!-- Navegação Principal -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg" style="background-color: #0d1b2a;">
       <div class="container-fluid">
         
         <!-- Logo e nome da empresa -->
@@ -22,11 +25,11 @@
           <a class="navbar-brand" href="#" style="padding: 0;">
             <img src="logo.jpg" alt="KingFood Logo" width="60" height="48" style="display: block; margin: 0 auto;">
           </a>
-          <a class="navbar-brand" href="#" style="font-size: 1.2rem; margin-top: 5px;"> KingFood's </a>
+          <a class="navbar-brand" href="#" style="font-size: 1.2rem; margin-top: 5px; color: #ffc107 !important;"> KingFood </a>
         </div>
         
         <!-- Botão de menu responsivo para dispositivos móveis -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" style="background-color: #ffc107;">
           <span class="navbar-toggler-icon"></span>
         </button>
         
@@ -34,40 +37,40 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre</a>
+              <a class="nav-link" href="#sobre" style="color: #ffc107 !important;">Sobre</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #ffc107 !important;">
                 Tipos de Cozinha
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://cardapio.menu/restaurants/fortaleza-7/braz-massas-e-molhos">Italiana</a></li>
-                <li><a class="dropdown-item" href="https://cardapio.menu/restaurants/fortaleza/marcel-28">Francesa</a></li>
-                <li><a class="dropdown-item" href="https://damakisushi.com.br/damakisushi">Japonesa</a></li>
-                <li><a class="dropdown-item" href="https://cardapio.menu/restaurants/fortaleza/marques-da-varjota">Portuguesa</a></li>
-                <li><a class="dropdown-item" href="https://cardapio.menu">Outros</a></li>
+              <ul class="dropdown-menu" style="background-color: #0d1b2a; border: 1px solid #ffc107;">
+                <li><a class="dropdown-item" href="https://cardapio.menu/restaurants/fortaleza-7/braz-massas-e-molhos" style="color: #ffc107;">Italiana</a></li>
+                <li><a class="dropdown-item" href="https://cardapio.menu/restaurants/fortaleza/marcel-28" style="color: #ffc107;">Francesa</a></li>
+                <li><a class="dropdown-item" href="https://damakisushi.com.br/damakisushi" style="color: #ffc107;">Japonesa</a></li>
+                <li><a class="dropdown-item" href="https://cardapio.menu/restaurants/fortaleza/marques-da-varjota" style="color: #ffc107;">Portuguesa</a></li>
+                <li><a class="dropdown-item" href="https://cardapio.menu" style="color: #ffc107;">Outros</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Ajuda</a>
+              <a class="nav-link" href="#" style="color: #ffc107 !important;">Ajuda</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #ffc107 !important;">
                 Apps Parceiros
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://www.ifood.com.br/">iFood</a></li>
-                <li><a class="dropdown-item" href="https://www.mcdonalds.com.br/">McDonald's</a></li>
-                <li><a class="dropdown-item" href="https://www.burgerking.com.br/">Burger King</a></li>
-                <li><a class="dropdown-item" href="https://www.dominos.com.br/">Domino's</a></li>
-                <li><a class="dropdown-item" href="https://www.tripadvisor.com.br/Restaurants">Tripadvisor</a></li>
+              <ul class="dropdown-menu" style="background-color: #0d1b2a; border: 1px solid #ffc107;">
+                <li><a class="dropdown-item" href="https://www.ifood.com.br/" style="color: #ffc107;">iFood</a></li>
+                <li><a class="dropdown-item" href="https://www.mcdonalds.com.br/" style="color: #ffc107;">McDonald's</a></li>
+                <li><a class="dropdown-item" href="https://www.burgerking.com.br/" style="color: #ffc107;">Burger King</a></li>
+                <li><a class="dropdown-item" href="https://www.dominos.com.br/" style="color: #ffc107;">Domino's</a></li>
+                <li><a class="dropdown-item" href="https://www.tripadvisor.com.br/Restaurants" style="color: #ffc107;">Tripadvisor</a></li>
               </ul>
             </li>
           </ul>
           
           <form class="d-flex" role="search" id="searchForm">
-            <input class="form-control me-2" type="search" placeholder="Pesquisar restaurantes" id="searchInput">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <input class="form-control me-2" type="search" placeholder="Pesquisar restaurantes" id="searchInput" style="background-color: #fff; border: 1px solid #ffc107;">
+            <button class="btn" type="submit" style="background-color: #ffc107; color: #0d1b2a; font-weight: bold;">Buscar</button>
           </form>
         </div>
       </div>
