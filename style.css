@@ -10,9 +10,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar */
+/* Navbar - COR DE FUNDO ALTERADA */
 .navbar {
-  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a2e 100%);
+  background-color: #0d1b2a;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   padding: 0.8rem 0;
 }
